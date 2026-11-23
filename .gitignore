@@ -1,4 +1,6 @@
 __pycache__/
 *.pyc
 watch.log
+watch_launchd.log
+watch_launchd.err.log
 .DS_Store

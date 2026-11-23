@@ -9,14 +9,17 @@ Publishes a public dashboard anyone can open — no install, no login.
 ## Public dashboard (GitHub Pages)
 
 The `docs/` folder is a static web app (dashboard, searchable page list,
-before/after diff viewer, page history). `.github/workflows/watch.yml` runs
-every 30 minutes on GitHub Actions: check for changes → rebuild `docs/data.json` →
-commit state → deploy to GitHub Pages.
+before/after diff viewer, page history). A check runs every 30 minutes:
+check for changes → rebuild `docs/data.json` → commit + push to `main`.
+GitHub Pages publishes `docs/` from `main` directly, so every push deploys
+the site automatically (no Pages Actions needed).
 
 One-time setup (already done for this repo):
 1. Public repo: `mandy-9890/help-topstep-watch`.
-2. Repo **Settings → Pages → Source: GitHub Actions**.
-3. The `watch` workflow runs every 30 minutes; trigger manually via Actions tab → watch → Run workflow.
+2. Repo **Settings → Pages → Source: Deploy from a branch → main / docs**.
+3. Local `launchd` agent (`~/Library/LaunchAgents/com.topstepwatch.check.plist`)
+   runs `watch_local.sh` every 1800 seconds — this is the primary scheduler.
+4. `.github/workflows/watch.yml` is the cloud fallback / manual trigger (Actions tab → watch → Run workflow).
 
 Public link: **https://mandy-9890.github.io/help-topstep-watch/**
 
@@ -33,7 +36,7 @@ Public link: **https://mandy-9890.github.io/help-topstep-watch/**
 ## Usage
 
 ```bash
-python3 tracker.py run                 # check for changes (run daily/hourly via cron)
+python3 tracker.py run                 # check for changes (run every 30 min)
 python3 tracker.py run --full          # re-fetch everything, catches edits without timestamp bumps
 python3 tracker.py run --site topstep  # only one site
 
@@ -43,17 +46,22 @@ python3 tracker.py history "payout"    # full event timeline for matching pages
 python3 tracker.py pages               # all pages, most recently updated first
 ```
 
-## Schedule it (macOS cron example, every 30 min)
+## Scheduling (macOS)
+
+Installed and running: `~/Library/LaunchAgents/com.topstepwatch.check.plist`
+fires `watch_local.sh` every 1800 seconds. It pulls, runs the check, rebuilds
+the site, commits and pushes if anything changed. Logs go to `watch.log`.
+
+Useful commands:
 
 ```
-*/30 * * * * cd /Users/mandarnirantar/Desktop/Futurex_algo/topstep_watch && /usr/bin/python3 tracker.py run >> watch.log 2>&1
+launchctl list | grep topstepwatch                  # verify it's loaded
+tail -f watch.log                                   # follow checks
+launchctl kickstart -k gui/501/com.topstepwatch.check  # force a run now
 ```
 
-Weekly deep check (catches silent edits):
-
-```
-0 6 * * 1 cd /Users/mandarnirantar/Desktop/Futurex_algo/topstep_watch && /usr/bin/python3 tracker.py run --full >> watch.log 2>&1
-```
+The GitHub workflow also has a `0,30` cron plus a weekly `run --full`, but
+GitHub's scheduler is best-effort and did not fire reliably for this repo.
 
 ## Files
 
@@ -62,7 +70,8 @@ Weekly deep check (catches silent edits):
 - `docs/` — static dashboard (index.html, app.js, style.css, data.json)
 - `tracker.db` — SQLite: `pages`, `snapshots` (full text history), `events` (diffs)
 - `CHANGELOG.md` — human-readable feed of adds/changes/removals
-- `.github/workflows/watch.yml` — cloud check every 30 min + Pages deploy
+- `watch_local.sh` — local 30-min check + push (driven by launchd)
+- `.github/workflows/watch.yml` — cloud fallback / manual trigger (no Pages deploy action)
 
 ## Notes
 
