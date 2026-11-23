@@ -2,7 +2,7 @@ name: watch
 
 on:
   schedule:
-    - cron: "*/30 * * * *"  # check every 30 minutes
+    - cron: "0,30 * * * *"  # check every 30 minutes
     - cron: "0 6 * * 1"    # weekly full re-fetch (catches silent edits)
   workflow_dispatch: {}
 
