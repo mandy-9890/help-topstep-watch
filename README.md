@@ -25,10 +25,11 @@ Public link: **https://mandy-9890.github.io/help-topstep-watch/**
 
 ## How it works
 
-1. Reads each site's public sitemap (one request covers all pages, each with a `lastmod` timestamp).
+1. Reads each site's public sitemap to discover all pages.
 2. First run saves a **baseline snapshot** of every page's text into `tracker.db` (SQLite).
-3. Later runs compare timestamps; when one moves, the page is re-fetched and its
-   **content hash** is compared (filters out GitBook rebuild noise / false positives).
+3. Later runs re-fetch **every page every 30 minutes** and compare the **content
+   hash**. Sitemap `lastmod` is not trusted: Intercom edits articles without
+   bumping it (e.g. Topstep Labs changed 24 Nov while `lastmod` stayed 19 Nov).
 4. Real changes get a new snapshot + a unified **before/after diff**, logged to the
    `events` table and appended to `CHANGELOG.md`.
 5. New pages and deleted pages are also detected and logged.

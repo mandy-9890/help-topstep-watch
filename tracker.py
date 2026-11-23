@@ -275,11 +275,10 @@ def check_site(db, site, cfg, full=False):
 
     for i, (url, lastmod) in enumerate(sorted(entries.items())):
         row = db.execute("SELECT lastmod, content_hash, title FROM pages WHERE url=?", (url,)).fetchone()
-        need_fetch = full or row is None or (lastmod and row[0] != lastmod) or (lastmod is None)
-        if not need_fetch:
-            stats["unchanged"] += 1
-            db.execute("UPDATE pages SET last_checked=? WHERE url=?", (now(), url))
-            continue
+        # Always re-fetch. Intercom/GitBook do not reliably bump sitemap lastmod
+        # when article text changes (e.g. Topstep Labs edited 24 Nov but its
+        # lastmod stayed 19 Nov), so timestamps cannot be used to skip pages.
+        # Full scan is ~145 requests with crawl-delay ≈ 2 min per check.
 
         time.sleep(cfg["delay"])
         try:

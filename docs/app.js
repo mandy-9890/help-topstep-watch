@@ -175,8 +175,8 @@ function viewAbout() {
       </ul>
       <p><b>How it works</b></p>
       <ul>
-        <li>Both sites publish sitemaps with per-page update timestamps.</li>
-        <li>An automated job checks them every 30 minutes. When a timestamp moves, the page is re-fetched and its content compared against the stored snapshot.</li>
+        <li>Both sites publish sitemaps that list all their pages.</li>
+        <li>An automated job re-fetches every page every 30 minutes and compares its content hash against the stored snapshot. This catches edits even when the site forgets to update its timestamp.</li>
         <li>Real edits are recorded as <span style="color:var(--red)">before</span>/<span style="color:var(--green)">after</span> diffs. New and deleted pages are flagged too.</li>
         <li>Site-rebuild timestamp bumps with identical content are ignored.</li>
       </ul>
