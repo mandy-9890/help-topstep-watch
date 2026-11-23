@@ -143,7 +143,7 @@ def extract_text(page_html, content_tag):
     chunk = m.group(0) if m else page_html
     # Intercom injects a rotating "Related Articles" widget at the end of the
     # article. Its links change between requests and are not page edits.
-    chunk = re.split(r"<section[^>]*related_articles[^>]*>", chunk, 1, flags=re.I)[0]
+    chunk = re.split(r"<section[^>]*related_articles[^>]*>", chunk, maxsplit=1, flags=re.I)[0]
     chunk = re.sub(r"<(script|style|nav|header|footer|svg)[ >].*?</\1>", " ", chunk, flags=re.S | re.I)
     chunk = re.sub(r"</td>|</th>", " | ", chunk, flags=re.I)
     chunk = BLOCK_END.sub("\n", chunk)
@@ -166,7 +166,7 @@ def extract_html(page_html, content_tag, base_url):
     if not m:
         return ""
     chunk = m.group(0)
-    chunk = re.split(r"<section[^>]*related_articles[^>]*>", chunk, 1, flags=re.I)[0]
+    chunk = re.split(r"<section[^>]*related_articles[^>]*>", chunk, maxsplit=1, flags=re.I)[0]
     chunk = re.sub(r"<!--.*?-->", "", chunk, flags=re.S)
     chunk = re.sub(
         r"<(script|style|nav|header|footer|svg|button|form|noscript|iframe)[ >].*?</\1>",
