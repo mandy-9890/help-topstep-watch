@@ -30,6 +30,7 @@ import sys
 import time
 import urllib.request
 from pathlib import Path
+from urllib.parse import urljoin
 
 BASE = Path(__file__).resolve().parent
 DB_PATH = BASE / "tracker.db"
@@ -75,7 +76,8 @@ CREATE TABLE IF NOT EXISTS snapshots (
     url        TEXT NOT NULL,
     fetched_at TEXT NOT NULL,
     lastmod    TEXT,
-    content    TEXT NOT NULL
+    content    TEXT NOT NULL,
+    content_html TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_snapshots_url ON snapshots(url, id);
 CREATE TABLE IF NOT EXISTS events (
@@ -150,6 +152,42 @@ def extract_text(page_html, content_tag):
         if line and line not in {"Copy", "|"}:
             lines.append(line)
     return "\n".join(lines)
+
+
+ALLOWED_ATTRS = {"href", "src", "alt", "colspan", "rowspan"}
+
+
+def extract_html(page_html, content_tag, base_url):
+    """Cleaned content HTML for rendering like the source page (no scripts/styles/attrs)."""
+    m = re.search(rf"<{content_tag}[ >].*?</{content_tag}>", page_html, re.S | re.I)
+    if not m:
+        return ""
+    chunk = m.group(0)
+    chunk = re.sub(r"<!--.*?-->", "", chunk, flags=re.S)
+    chunk = re.sub(
+        r"<(script|style|nav|header|footer|svg|button|form|noscript|iframe)[ >].*?</\1>",
+        " ", chunk, flags=re.S | re.I,
+    )
+
+    def clean_tag(m):
+        tag, attrs = m.group(1).lower(), m.group(2) or ""
+        if tag in {"input", "iframe", "source", "object", "embed"}:
+            return ""
+        keep = []
+        for a in re.finditer(r'([a-zA-Z-]+)\s*=\s*"([^"]*)"', attrs):
+            name, val = a.group(1).lower(), a.group(2)
+            if name not in ALLOWED_ATTRS:
+                continue
+            if name in ("href", "src"):
+                if val.lower().startswith("javascript:"):
+                    continue
+                if val and not val.startswith(("http", "#", "mailto:", "data:")):
+                    val = urljoin(base_url, val)
+            keep.append(f'{name}="{val}"')
+        return f"<{tag}{' ' + ' '.join(keep) if keep else ''}>"
+
+    chunk = re.sub(r"<([a-zA-Z][a-zA-Z0-9]*)([^>]*)>", clean_tag, chunk)
+    return chunk.strip()
 
 
 def extract_title(page_html, content_tag="article"):
@@ -252,6 +290,7 @@ def check_site(db, site, cfg, full=False):
             continue
 
         text = extract_text(page_html, cfg["content_tag"])
+        html_content = extract_html(page_html, cfg["content_tag"], url)
         title = extract_title(page_html, cfg["content_tag"])
         h = content_hash(text)
         ts = now()
@@ -264,8 +303,8 @@ def check_site(db, site, cfg, full=False):
                 (url, site, title, lastmod, h, ts, ts, ts),
             )
             db.execute(
-                "INSERT INTO snapshots(url, fetched_at, lastmod, content) VALUES(?,?,?,?)",
-                (url, ts, lastmod, text),
+                "INSERT INTO snapshots(url, fetched_at, lastmod, content, content_html) VALUES(?,?,?,?,?)",
+                (url, ts, lastmod, text, html_content),
             )
             record_event(db, url, site, kind, None, lastmod, None, title)
             stats["new"] += 1
@@ -274,8 +313,8 @@ def check_site(db, site, cfg, full=False):
             snap = latest_snapshot(db, url)
             diff = make_diff(snap[3], text, snap[2] or snap[1], lastmod or ts)
             db.execute(
-                "INSERT INTO snapshots(url, fetched_at, lastmod, content) VALUES(?,?,?,?)",
-                (url, ts, lastmod, text),
+                "INSERT INTO snapshots(url, fetched_at, lastmod, content, content_html) VALUES(?,?,?,?,?)",
+                (url, ts, lastmod, text, html_content),
             )
             db.execute(
                 "UPDATE pages SET title=?, lastmod=?, content_hash=?, status='active',"
@@ -321,6 +360,10 @@ def find_pages(db, keyword):
 def cmd_run(args):
     db = sqlite3.connect(DB_PATH)
     db.executescript(SCHEMA)
+    cols = [r[1] for r in db.execute("PRAGMA table_info(snapshots)")]
+    if "content_html" not in cols:
+        db.execute("ALTER TABLE snapshots ADD COLUMN content_html TEXT")
+        db.commit()
     sites = {args.site: SITES[args.site]} if args.site else SITES
     for site, cfg in sites.items():
         check_site(db, site, cfg, full=args.full)

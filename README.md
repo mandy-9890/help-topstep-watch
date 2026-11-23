@@ -10,13 +10,13 @@ Publishes a public dashboard anyone can open — no install, no login.
 
 The `docs/` folder is a static web app (dashboard, searchable page list,
 before/after diff viewer, page history). `.github/workflows/watch.yml` runs
-hourly on GitHub Actions: check for changes → rebuild `docs/data.json` →
+every 30 minutes on GitHub Actions: check for changes → rebuild `docs/data.json` →
 commit state → deploy to GitHub Pages.
 
 One-time setup (already done for this repo):
 1. Public repo: `mandy-9890/help-topstep-watch`.
 2. Repo **Settings → Pages → Source: GitHub Actions**.
-3. The `watch` workflow runs hourly; trigger manually via Actions tab → watch → Run workflow.
+3. The `watch` workflow runs every 30 minutes; trigger manually via Actions tab → watch → Run workflow.
 
 Public link: **https://mandy-9890.github.io/help-topstep-watch/**
 
@@ -43,10 +43,10 @@ python3 tracker.py history "payout"    # full event timeline for matching pages
 python3 tracker.py pages               # all pages, most recently updated first
 ```
 
-## Schedule it (macOS cron example, hourly)
+## Schedule it (macOS cron example, every 30 min)
 
 ```
-0 * * * * cd /Users/mandarnirantar/Desktop/Futurex_algo/topstep_watch && /usr/bin/python3 tracker.py run >> watch.log 2>&1
+*/30 * * * * cd /Users/mandarnirantar/Desktop/Futurex_algo/topstep_watch && /usr/bin/python3 tracker.py run >> watch.log 2>&1
 ```
 
 Weekly deep check (catches silent edits):
@@ -62,7 +62,7 @@ Weekly deep check (catches silent edits):
 - `docs/` — static dashboard (index.html, app.js, style.css, data.json)
 - `tracker.db` — SQLite: `pages`, `snapshots` (full text history), `events` (diffs)
 - `CHANGELOG.md` — human-readable feed of adds/changes/removals
-- `.github/workflows/watch.yml` — hourly cloud check + Pages deploy
+- `.github/workflows/watch.yml` — cloud check every 30 min + Pages deploy
 
 ## Notes
 
