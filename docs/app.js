@@ -33,15 +33,18 @@ function viewHome() {
   const nX = pages.filter((p) => p.site === "topstepx").length;
   const ev = DATA.events;
   let html = `
-    <h1>Topstep &amp; TopstepX help-center changes</h1>
-    <p class="sub">Every rule &amp; platform doc update, with before/after diffs. Watching since ${fmt(DATA.baseline_at)}.</p>
+    <section class="hero">
+      <div class="live"><span class="dot"></span> LIVE · CHECKED HOURLY</div>
+      <h1>Every Topstep rule change,<br/><span class="hl">before &amp; after.</span></h1>
+      <p class="sub">Tracking ${pages.length} pages across help.topstep.com &amp; help.topstepx.com since ${fmt(DATA.baseline_at)}.</p>
+    </section>
     <div class="stats">
+      <div class="stat gold"><div class="n">${ev.length}</div><div class="l">changes detected</div></div>
       <div class="stat"><div class="n">${pages.length}</div><div class="l">pages tracked</div></div>
       <div class="stat"><div class="n">${nT}</div><div class="l">Topstep help pages</div></div>
       <div class="stat"><div class="n">${nX}</div><div class="l">TopstepX help pages</div></div>
-      <div class="stat"><div class="n">${ev.length}</div><div class="l">changes detected</div></div>
     </div>
-    <h2>Recent changes</h2>`;
+    <h2>Recent changes ${ev.length ? `<span class="count">${ev.length}</span>` : ""}</h2>`;
   if (!ev.length) {
     html += `<div class="empty">No changes detected yet.<br/>Baseline saved ${fmt(DATA.baseline_at)} — any edit to either help center will appear here with a before/after diff.<br/><br/><a href="#/pages">Browse all tracked pages →</a></div>`;
   } else {
@@ -54,9 +57,8 @@ function eventCard(e) {
   const inner = `
     <div class="title">${kindBadge(e.kind)} ${siteBadge(e.site)} ${esc(e.title)}</div>
     <div class="meta">detected ${rel(e.detected_at)}${e.kind === "changed" ? ` · page updated ${rel(e.new_lastmod)}` : ""} · <span>${esc(e.url)}</span></div>`;
-  return e.kind === "changed"
-    ? `<div class="card clickable" onclick="location.hash='#/change/${e.id}'">${inner}</div>`
-    : `<div class="card clickable" onclick="location.hash='${pageHref(e.url)}'">${inner}</div>`;
+  const target = e.kind === "changed" ? `#/change/${e.id}` : pageHref(e.url);
+  return `<div class="card clickable ev-${e.kind}" onclick="location.hash='${target}'">${inner}</div>`;
 }
 
 function viewPages() {
@@ -88,13 +90,13 @@ function renderPageList() {
   );
   const el = document.getElementById("plist");
   if (!rows.length) { el.innerHTML = `<div class="empty">No pages match.</div>`; return; }
-  el.innerHTML = `<table><thead><tr><th>Page</th><th>Site</th><th>Updated</th></tr></thead><tbody>` +
+  el.innerHTML = `<div class="tablewrap"><table><thead><tr><th>Page</th><th>Site</th><th class="when">Updated</th></tr></thead><tbody>` +
     rows.map((p) => `
-      <tr onclick="location.hash='${pageHref(p.url)}'" style="cursor:pointer">
+      <tr onclick="location.hash='${pageHref(p.url)}'">
         <td><div class="t">${esc(p.title)} ${p.status !== "active" ? `<span class="badge removed">${p.status}</span>` : ""}</div><div class="u">${esc(p.url)}</div></td>
         <td>${siteBadge(p.site)}</td>
         <td class="when" title="${esc(p.lastmod || "")}">${rel(p.lastmod)}</td>
-      </tr>`).join("") + `</tbody></table>`;
+      </tr>`).join("") + `</tbody></table></div>`;
 }
 
 function viewChange(id) {
@@ -105,12 +107,12 @@ function viewChange(id) {
     <a class="back" href="#/">← Dashboard</a>
     <h1>${kindBadge(e.kind)} ${esc(e.title)}</h1>
     <p class="sub">${siteBadge(e.site)} <a href="${esc(e.url)}" target="_blank" rel="noopener">open source page ↗</a> · <a href="${pageHref(e.url)}">page history</a></p>
-    <div class="card">
+    <div class="card metagrid">
       <div class="meta">Change detected: <b>${fmt(e.detected_at)}</b></div>
       ${e.kind === "changed" ? `<div class="meta">Source page updated: ${fmt(e.old_lastmod)} → <b>${fmt(e.new_lastmod)}</b></div>` : ""}
     </div>`;
   if (e.diff) {
-    html += `<p class="legend"><span class="r">red = earlier (removed)</span> · <span class="g">green = current (added)</span></p>` + renderDiff(e.diff);
+    html += `<div class="diffhead"><span class="earlier">EARLIER</span><span class="arrow">→</span><span class="current">CURRENT</span></div>` + renderDiff(e.diff);
   } else {
     html += `<div class="empty">Page was ${e.kind}. <a href="${pageHref(e.url)}">View page →</a></div>`;
   }
@@ -137,7 +139,7 @@ function viewPage(url) {
     <a class="back" href="#/pages">← All pages</a>
     <h1>${esc(p.title)}</h1>
     <p class="sub">${siteBadge(p.site)} <a href="${esc(p.url)}" target="_blank" rel="noopener">open source page ↗</a></p>
-    <div class="card">
+    <div class="card metagrid">
       <div class="meta">Last updated on source: <b>${fmt(p.lastmod)}</b> (${rel(p.lastmod)})</div>
       <div class="meta">Tracking since: ${fmt(p.first_seen)} · last checked: ${rel(p.last_checked)}</div>
     </div>
@@ -152,7 +154,7 @@ function viewPage(url) {
 function viewAbout() {
   setActive("about");
   app.innerHTML = `
-    <h1>About Topstep Watch</h1>
+    <h1>About T Watch</h1>
     <p class="sub">An independent change tracker for Topstep's public documentation.</p>
     <div class="card">
       <p><b>What it watches</b></p>
