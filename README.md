@@ -49,8 +49,12 @@ python3 tracker.py pages               # all pages, most recently updated first
 ## Scheduling (macOS)
 
 Installed and running: `~/Library/LaunchAgents/com.topstepwatch.check.plist`
-fires `watch_local.sh` every 1800 seconds. It pulls, runs the check, rebuilds
-the site, commits and pushes if anything changed. Logs go to `watch.log`.
+fires `~/help-topstep-watch/watch_local.sh` every 1800 seconds. It pulls, runs
+the check, rebuilds the site, commits and pushes if anything changed. Logs go
+to `~/help-topstep-watch/watch.log`.
+
+The scheduler runs from the home-folder clone (not `Desktop/`) because macOS
+privacy rules block launchd from reading files on the Desktop.
 
 Useful commands:
 

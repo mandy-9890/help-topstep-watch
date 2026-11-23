@@ -3,7 +3,7 @@
 # Runs the check, rebuilds the dashboard, and pushes to main (Pages auto-deploys).
 set -euo pipefail
 
-REPO="/Users/mandarnirantar/Desktop/Futurex_algo/topstep_watch"
+REPO="/Users/mandarnirantar/help-topstep-watch"
 PY="/opt/homebrew/bin/python3"
 GIT="/usr/bin/git"
 LOCK="/tmp/topstep-watch.lock"
