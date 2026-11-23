@@ -10,8 +10,8 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
 - Page updated: `2026-11-19T17:51:19Z` → `2026-11-19T17:51:19Z`
 
 ```diff
---- before (2026-11-19T17:51:19Z)
-+++ after (2026-11-19T17:51:19Z)
+--- before (2026-11-23T15:15:16Z)
++++ after (2026-11-23T19:47:00Z)
 @@ -16,4 +16,5 @@
  Topstep Labs Drops
  Check here for Topstep Labs offering details. Once something drops, we'll list it here.
