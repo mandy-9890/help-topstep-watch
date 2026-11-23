@@ -68,3 +68,13 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
 +Topstep Challenges
 ```
 
+## 2026-11-23T20:39:05Z — ADDED: Topstep Challenges
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/18466040-topstep-challenges
+
+## 2026-11-23T20:39:07Z — ADDED: Starter Challenge
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/18482122-starter-challenge
+
