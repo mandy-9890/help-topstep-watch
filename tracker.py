@@ -314,7 +314,7 @@ def check_site(db, site, cfg, full=False):
             print(f"  + {kind}: {title or url}")
         elif h != row[1]:
             snap = latest_snapshot(db, url)
-            diff = make_diff(snap[3], text, snap[2] or snap[1], lastmod or ts)
+            diff = make_diff(snap[3], text, snap[1], ts)
             db.execute(
                 "INSERT INTO snapshots(url, fetched_at, lastmod, content, content_html) VALUES(?,?,?,?,?)",
                 (url, ts, lastmod, text, html_content),
