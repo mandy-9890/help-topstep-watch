@@ -78,3 +78,106 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
 - Site: `topstep`
 - URL: https://help.topstep.com/en/articles/18482122-starter-challenge
 
+## 2026-11-23T23:05:03Z — CHANGED: Risk Adjustments: High Risk/High Volatility
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/13613539-risk-adjustments-high-risk-high-volatility
+- Page updated: `2026-11-16T22:09:21Z` → `2026-11-16T22:09:21Z`
+
+```diff
+--- before (2026-11-23T15:15:01Z)
++++ after (2026-11-23T23:05:03Z)
+@@ -61,5 +61,4 @@
+ In the Return of the $3K Undead Challenge , MCL and MGC are limited to 31 lots. MBT and MET are limited to 5 lots. CL, GC, HO, QM, and RB are limited to 3 lots. MHG and SIL are limited to 2 lots. HG, PL, and SI are 0. During Tier 1 News Events, GC is 0, and MES, MNQ, MYM, M2K, and MGC are limited to 3 lots.
+ In the Revenge of the $3K Slasher Challenge , MCL and MGC are limited to 12 lots. MBT and MET are limited to 2 lots. CL, GC, HO, QM, RB, MHG, and SIL are limited to 1 lot. HG, PL, and SI are 0. During Tier 1 News Events, GC is 0, and MES, MNQ, MYM, M2K, and MGC are limited to 1 lot.
+-In the Launchpad Challenge , products are capped at 1 micro contract. However, you cannot trade MGC or MCL. During Tier 1 News Events, all trading is blocked.
+ ​
+ The $100K & $150K Static Trading Combines have the same limitations as standard $100K and $150K Trading Combines listed in the table above.
+@@ -79,24 +78,24 @@
+ Below $1500 balance = 1 mini / 12 micros
+ $1,500 balance = 1 mini / 18 micros
+-$2,000 balance = 3 mini / 31 micros
++$2,000 balance = 3 mini / 30 micros
+ 100K Express Funded Account
+ Below $1500 balance = 1 mini / 18 micros
+ $1,500 balance = 2 mini / 25 micros
+-$2,000 balance = 3 minis / 31 micros
+-$3,000 balance = 6 minis / 62 micros
++$2,000 balance = 3 minis / 30 micros
++$3,000 balance = 6 minis / 60 micros
+ 150K Express Funded Account
+ Below $1500 balance = 1 mini / 18 micros
+ $1,500 balance = 2 minis / 25 micros
+-$2,000 balance = 3 minis / 31 micros
+-$3,000 balance = 6 minis / 62 micros
+-$4,500 balance = 9 minis / 93 micros
++$2,000 balance = 3 minis / 30 micros
++$3,000 balance = 6 minis / 60 micros
++$4,500 balance = 9 minis / 90 micros
+ 250K Express Funded Account
+ Below $1500 balance = 1 mini / 18 micros
+ $1,500 balance = 2 minis / 25 micros
+-$2,000 balance = 3 minis / 31 micros
+-$3,000 balance = 6 minis / 62 micros
+-$4,500 balance = 9 minis / 93 micros
++$2,000 balance = 3 minis / 30 micros
++$3,000 balance = 6 minis / 60 micros
++$4,500 balance = 9 minis / 90 micros
+ $6,000 balance = 12 minis / 125 micros
+-$8,000+ balance = 15 minis / 156 micros
++$8,000+ balance = 15 minis / 150 micros
+ Example of the Scaling Plan for restricted symbols on the 2/5/7 plan
+ Symbols this applies to:
+@@ -184,29 +183,34 @@
+ | Equity Minis
+ | Effect during window
+-$1.5K Challenge (Powered Up)
++Starter & Launchpad Challenges
++| $1000
++| 0
++| 0
++| Trading of restricted products blocked
++$500 Challenge
++| $1000
++| 0
++| 0
++| Trading of restricted products blocked
++$1.5K Challenge
+ | $20,000
+ | 1
+ | Blocked
+ | Capped at 1 micro
+-$3K Challenge Undead
++$3K Challenge
+ | $50,000
+ | 3
+ | Blocked
+ | Capped at 3 micros
+-$3K Challenge Slasher
+-| $20,000
+-| 1
+-| Blocked
+-| Capped at 1 micro
+ $6K Challenge
+-| $20,000
+-| 1
+-| Blocked
+-| Capped at 1 micro
+-Launchpad Challenge
+-| $1,000
+-| 0
+-| Blocked
+-| No Trading available
++| $100,000
++| 6
++| Blocked
++| Capped at 6 micros
++$9K Challenge
++| $150,000
++| 9
++| Blocked
++| Capped at 9 micros
+ Trading Combines
+ Account
+```
+
