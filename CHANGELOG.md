@@ -181,3 +181,22 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  Account
 ```
 
+## 2026-11-24T03:07:05Z — CHANGED: Topstep Holiday Trading Hours
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/13350348-topstep-holiday-trading-hours
+- Page updated: `2026-09-18T17:28:29Z` → `2026-09-18T17:28:29Z`
+
+```diff
+--- before (2026-11-23T15:14:58Z)
++++ after (2026-11-24T03:07:05Z)
+@@ -54,5 +54,6 @@
+ Day After Thanksgiving
+ | Fri Nov 27, 2026
+-| 12:00 CT
++| SIM: 12:00 CT
++Live: 11:25 CT
+ | 17:00 CT Sun Nov 29
+ Christmas Eve
+```
+
