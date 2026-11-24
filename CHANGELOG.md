@@ -218,3 +218,26 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  The first program under Topstep Labs. A one-time-fee evaluation with $25,000 in buying power and a static Maximum Loss Limit — your drawdown floor never moves, so your effective room grows as your account does.
 ```
 
+## 2026-11-24T20:19:59Z — CHANGED: Topstep Payout Policy
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/8284233-topstep-payout-policy
+- Page updated: `2026-11-22T21:13:57Z` → `2026-11-24T20:04:01Z`
+
+```diff
+--- before (2026-11-23T15:16:12Z)
++++ after (2026-11-24T20:19:59Z)
+@@ -127,9 +127,9 @@
+ | No Fee
+ Aeropay
+-| US banks only
++| US only
+ | Instant after approval
+ | No Topstep fee**
+ ACH
+-| US banks only
++| US only
+ | 1-3 business days
+ | $30
+```
+
