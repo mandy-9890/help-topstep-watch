@@ -241,3 +241,38 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  | $30
 ```
 
+## 2026-11-25T14:46:38Z — CHANGED: Topstep Challenges
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/18466040-topstep-challenges
+- Page updated: `2026-11-23T18:33:33Z` → `2026-11-23T18:33:33Z`
+
+```diff
+--- before (2026-11-23T20:39:05Z)
++++ after (2026-11-25T14:46:38Z)
+@@ -18,5 +18,5 @@
+ | 0 minis / 1 micro
+ Please note:
+-The Starter Challenge is only available to Traders who have never made a purchase with Topstep. Learn more here.
++The Starter Challenge is only available to Traders who have never made a purchase with Topstep. Learn more here .
+ The Launchpad Challenge is only available to Traders who have never passed a Trading Combine or Challenge, and do not currently hold a Starter Challenge.
+ Standard Challenges
+```
+
+## 2026-11-25T14:46:58Z — CHANGED: What is a Reset?
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/8284128-what-is-a-reset
+- Page updated: `2026-11-23T16:38:30Z` → `2026-11-23T16:38:30Z`
+
+```diff
+--- before (2026-11-23T15:15:42Z)
++++ after (2026-11-25T14:46:58Z)
+@@ -39,4 +39,4 @@
+ ​
+ A Reset in a Challenge returns your account to its starting balance and clears its previous rule violations. Since there's no subscription fee in Topstep Challenges, Resets do not affect Rebill dates. As a reminder:
+-The Starter Challenge is only available to Traders who have never made a purchase with Topstep. Learn more here.
++The Starter Challenge is only available to Traders who have never made a purchase with Topstep. Learn more here .
+ The Launchpad Challenge is only available to Traders who have never passed a Trading Combine or Challenge, and do not currently hold a Starter Challenge.
+```
+
