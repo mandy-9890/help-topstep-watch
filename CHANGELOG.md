@@ -276,3 +276,59 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  The Launchpad Challenge is only available to Traders who have never passed a Trading Combine or Challenge, and do not currently hold a Starter Challenge.
 ```
 
+## 2026-11-25T17:01:47Z — CHANGED: Topstep Pricing and Payment Questions
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions
+- Page updated: `2026-11-23T16:01:13Z` → `2026-11-23T16:01:13Z`
+
+```diff
+--- before (2026-11-23T15:15:10Z)
++++ after (2026-11-25T17:01:47Z)
+@@ -127,15 +127,16 @@
+ Affiliate Codes
+ What is Topstep’s affiliate program?
+-Topstep partners with a select group of creators, some of whom have an affiliate code to share with their community. When someone purchases with Topstep for the first time using an affiliate code, they save 20%.
++Topstep partners with a select group of creators, some of whom have an affiliate code to share with their community. When an eligible trader purchases with Topstep using an affiliate code, they receive the affiliate code discount
+ What is the affiliate code offer?
+-20% off your first Topstep purchase (Trading Combine, Topstep Labs, or an Evaluation Challenge) when you check out with an affiliate’s code.
++The standard offer is 20% off an eligible Topstep purchase (Trading Combine, Topstep Labs, or an Evaluation Challenge) when you check out with an affiliate’s code. During select promotional periods, the affiliate code discount may be higher than 20%. The discount percentage and dates for any promotion will be shown at checkout or in the promotion details, and the discount in effect at the time of your purchase applies. When a promotional period ends, the discount returns to the standard 20%.
+ Who is eligible to use an affiliate’s code?
+-If you have never previously purchased with Topstep, you are eligible to use an affiliate code on your very first Topstep purchase for the purchase of a Topstep Trading Combine, Topstep Labs, or a Topstep Evaluation Challenge. Traders new to Topstep can only use one affiliate code, one time.
++You are eligible to use an affiliate code on an eligible purchase of a Topstep Trading Combine, Topstep Labs, or a Topstep Evaluation Challenge if you have never previously purchased with Topstep, or if your last purchase with Topstep was 6 or more months ago as of the day of purchase. You can only use one affiliate code, one time, ever.
+ I want to purchase more than one account. Does the code apply to all purchases?
+-No, affiliate codes are eligible to be used on your first purchase with Topstep. Affiliate codes do not apply to Resets, Back2Funded, market data add-ons, or anything you buy after that first purchase.
++No, affiliate codes are eligible to be used on one eligible purchase with Topstep. Affiliate codes do not apply to Resets, Back2Funded, market data add-ons, or anything you buy after that eligible purchase.
+ Can I stack an affiliate code with another promo or code?
+-No, you cannot stack with another promo code, discount, or a referral code. There is one exception: if you opt to add a Daily Loss Limit to a No Activation Fee Trading Combine during your first purchase with Topstep, you can still use an affiliate code to save 20% in addition to the Responsible Trading Advantage savings.
++No, you cannot stack with another promo code, discount, or a referral code. There is one exception: if you opt to add a DLL to a No Activation Fee Trading Combine during your eligible purchase with Topstep, you can still use an affiliate code to receive the affiliate code discount in addition to the Responsible Trading Advantage savings.
+ How can I become a Topstep Affiliate?
+-We’re launching a new affiliate program and rolling it out gradually, starting with a small group of Traders. Details are limited for now. We’ll share more information here as the program expands!
++We’re launching a new affiliate program and rolling it out gradually, starting with a small group of Traders. Details are limited for now. We’ll share more information here as the program expands.
++Have an Affiliate promo code? Learn more about our promo codes here !
+ How to Add or Update Payment Details
+ Go to your Billing Page on the Dashboard
+```
+
+## 2026-11-25T17:01:55Z — CHANGED: Topstep Labs
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/15520357-topstep-labs
+- Page updated: `2026-11-24T19:35:10Z` → `2026-11-24T19:35:10Z`
+
+```diff
+--- before (2026-11-24T19:45:24Z)
++++ after (2026-11-25T17:01:55Z)
+@@ -724,7 +724,7 @@
+ | 90/10
+ Daily Payout details:
+-After your first Payout, you must be net positive since your last Payout.
+-Payouts come from profits made during the trading day, locked in at 4:00 PM CT.
+-5 p.m. CT is the cutoff for a Payout request. Any request after 5 p.m. CT applies to the next trade day.
++Request a Payout intraday as soon as you’re eligible, without waiting for the 4PM CT session lock.
++Withdraw everything above your $2,000 buffer, up to $1,500 per Payout.
++You can only request one Payout per trading day. For your next Payout, you’ll need a new net-positive trading day based on closed trades since your last Payout. Any unused profits above the $2,000 buffer remain available.
+ Taking a daily Payout on an XFA sets your Maximum Loss Limit to $0, no matter where it was before. Your remaining balance becomes your effective loss floor.
+ Daily Payout example (either version): You have $3,200 in profit. After the $2,000 buffer, $1,200 is available. You can request between $250 and $1,200 today.
+```
+
