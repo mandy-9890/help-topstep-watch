@@ -332,3 +332,28 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  Daily Payout example (either version): You have $3,200 in profit. After the $2,000 buffer, $1,200 is available. You can request between $250 and $1,200 today.
 ```
 
+## 2026-11-25T20:22:48Z — CHANGED: Topstep Labs
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/15520357-topstep-labs
+- Page updated: `2026-11-24T19:35:10Z` → `2026-11-25T20:04:04Z`
+
+```diff
+--- before (2026-11-25T17:01:55Z)
++++ after (2026-11-25T20:22:48Z)
+@@ -63,5 +63,5 @@
+ | $150K Static Drawdown Trading Combine
+ | November 2026
+-👉 New! The $25K, $50K, $100K, and $150K Static Trading Combines, $250K Freedom Trading Combine, and $1.5K Challenge (Powered Up) are all now available for purchase any time. You can purchase up to 5 of each account per month! Head to your Dashboard and visit the Topstep Labs page to get started. 🧪
++👉 New! The $25K, $50K, $100K, and $150K Static Trading Combines, and $250K Freedom Trading Combine, are all now available for purchase any time. You can purchase up to 5 of each account per month! Head to your Dashboard and visit the Topstep Labs page to get started. 🧪
+ ​
+ ​ 👉 While Topstep Labs offers separate products with unique trading parameters, Express Funded Accounts earned through Labs remain subject to Topstep's overall funded account limits. Traders may have a maximum of five active Express Funded Accounts across standard and Labs offerings. Purchasing or passing a Labs Trading Combine does not guarantee immediate XFA activation eligibility.
+@@ -1112,5 +1112,5 @@
+ ​
+ ​ Can I Reset my account?
+-Yes. Each Launchpad Challenge is eligible for 1 Reset at $10, the same price as the Challenge. The Reset applies to the Challenge Round only. There are no Resets in the Payout Round.
++Yes. Each Launchpad Challenge is eligible for 2 free Resets. The Reset applies to the Challenge Round only. There are no Resets in the Payout Round.
+ ​
+ ​ Who is eligible to purchase this?
+```
+
