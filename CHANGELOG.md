@@ -357,3 +357,39 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  ​ Who is eligible to purchase this?
 ```
 
+## 2026-11-26T01:05:48Z — CHANGED: Topstep Labs
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/15520357-topstep-labs
+- Page updated: `2026-11-25T20:04:04Z` → `2026-11-25T20:04:04Z`
+
+```diff
+--- before (2026-11-25T20:22:48Z)
++++ after (2026-11-26T01:05:48Z)
+@@ -1112,5 +1112,5 @@
+ ​
+ ​ Can I Reset my account?
+-Yes. Each Launchpad Challenge is eligible for 2 free Resets. The Reset applies to the Challenge Round only. There are no Resets in the Payout Round.
++Yes. Each Launchpad Challenge is eligible for 1 Reset at $10, the same price as the Challenge. The Reset applies to the Challenge Round only. There are no Resets in the Payout Round.
+ ​
+ ​ Who is eligible to purchase this?
+```
+
+## 2026-11-26T01:05:53Z — CHANGED: Topstep Challenges
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/18466040-topstep-challenges
+- Page updated: `2026-11-25T14:33:26Z` → `2026-11-25T14:33:26Z`
+
+```diff
+--- before (2026-11-25T14:46:38Z)
++++ after (2026-11-26T01:05:53Z)
+@@ -75,5 +75,5 @@
+ Lifespan
+ | 90 days per round
+-*Except the Starter Challenge and Launchpad Challenge, which both include 2 free Resets.
++*Except the Starter Challenge, which includes 2 free Resets.
+ FAQs
+ Where do I find Challenges?
+```
+
