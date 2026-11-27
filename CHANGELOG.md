@@ -393,3 +393,355 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  Where do I find Challenges?
 ```
 
+## 2026-11-27T02:21:17Z — CHANGED: Components
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components
+- Page updated: `2026-03-01T22:52:05.331Z` → `2026-03-01T22:52:05.331Z`
+
+```diff
+--- before (2026-11-23T15:16:30Z)
++++ after (2026-11-27T02:21:17Z)
+@@ -13,3 +13,3 @@
+ Previous Creating Account Nicknames
+ Next TradingView™ Charts
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:20Z — CHANGED: Market Data
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/dom/market-data
+- Page updated: `2026-03-01T22:26:23.243Z` → `2026-03-01T22:26:23.243Z`
+
+```diff
+--- before (2026-11-23T15:16:38Z)
++++ after (2026-11-27T02:21:20Z)
+@@ -16,3 +16,3 @@
+ Previous DOM
+ Next Components
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:22Z — CHANGED: Trading
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/dom/trading
+- Page updated: `2026-03-01T22:27:16.020Z` → `2026-03-01T22:27:16.020Z`
+
+```diff
+--- before (2026-11-23T15:16:42Z)
++++ after (2026-11-27T02:21:22Z)
+@@ -19,3 +19,3 @@
+ Previous Components
+ Next Settings
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:23Z — CHANGED: Order Card
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/order-card
+- Page updated: `2026-03-01T22:56:34.539Z` → `2026-03-01T22:56:34.539Z`
+
+```diff
+--- before (2026-11-23T15:16:43Z)
++++ after (2026-11-27T02:21:23Z)
+@@ -2,3 +2,3 @@
+ Previous Settings
+ Next Trading
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:25Z — CHANGED: Trading
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/order-card/trading
+- Page updated: `2026-03-01T22:28:15.708Z` → `2026-03-01T22:28:15.708Z`
+
+```diff
+--- before (2026-11-23T15:16:45Z)
++++ after (2026-11-27T02:21:25Z)
+@@ -36,3 +36,3 @@
+ Previous Order Card
+ Next Settings
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:33Z — CHANGED: TradingView™ Charts
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/tradingview-tm-charts
+- Page updated: `2026-03-01T22:22:41.752Z` → `2026-03-01T22:22:41.752Z`
+
+```diff
+--- before (2026-11-23T15:17:02Z)
++++ after (2026-11-27T02:21:33Z)
+@@ -6,3 +6,3 @@
+ Previous Components
+ Next Chart types & timeframes
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:41Z — CHANGED: Chart types & timeframes
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/tradingview-tm-charts/chart-types-and-timeframes
+- Page updated: `2026-03-01T22:23:14.226Z` → `2026-03-01T22:23:14.226Z`
+
+```diff
+--- before (2026-11-23T15:17:16Z)
++++ after (2026-11-27T02:21:41Z)
+@@ -43,3 +43,3 @@
+ Previous TradingView™ Charts
+ Next Place and Modify Orders
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:43Z — CHANGED: Historical data
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/tradingview-tm-charts/historical-data
+- Page updated: `2026-03-01T22:24:59.282Z` → `2026-03-01T22:24:59.282Z`
+
+```diff
+--- before (2026-11-23T15:17:20Z)
++++ after (2026-11-27T02:21:43Z)
+@@ -2,3 +2,3 @@
+ Previous Custom indicators
+ Next Chart Drawing Tools
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:44Z — CHANGED: News Events
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/tradingview-tm-charts/news-events
+- Page updated: `2026-03-01T22:26:00.100Z` → `2026-03-01T22:26:00.100Z`
+
+```diff
+--- before (2026-11-23T15:17:24Z)
++++ after (2026-11-27T02:21:44Z)
+@@ -4,3 +4,3 @@
+ Previous Copy style across charts
+ Next DOM
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:50Z — CHANGED: Contract Rollover
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/contract-rollover
+- Page updated: `2026-03-01T22:19:47.239Z` → `2026-03-01T22:19:47.239Z`
+
+```diff
+--- before (2026-11-23T15:17:30Z)
++++ after (2026-11-27T02:21:50Z)
+@@ -3,3 +3,3 @@
+ Previous Linking Components
+ Next Data Feed
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:52Z — CHANGED: Data Feed
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/data-feed
+- Page updated: `2026-03-01T22:21:28.058Z` → `2026-03-01T22:21:28.058Z`
+
+```diff
+--- before (2026-11-23T15:17:33Z)
++++ after (2026-11-27T02:21:52Z)
+@@ -16,3 +16,3 @@
+ Previous Contract Rollover
+ Next Trading Lock-Out
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:56Z — CHANGED: Charts & Data
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data
+- Page updated: `2026-03-01T22:32:35.048Z` → `2026-03-01T22:32:35.048Z`
+
+```diff
+--- before (2026-11-23T15:17:39Z)
++++ after (2026-11-27T02:21:56Z)
+@@ -18,3 +18,3 @@
+ Previous Trade Clock
+ Next Data Update Speed
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:56Z — CHANGED: Account Settings
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/account-settings
+- Page updated: `2026-03-01T22:34:56.079Z` → `2026-03-01T22:34:56.079Z`
+
+```diff
+--- before (2026-11-23T15:17:40Z)
++++ after (2026-11-27T02:21:56Z)
+@@ -4,3 +4,3 @@
+ Previous Chart Executions
+ Next Hide Economic Events
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:58Z — CHANGED: Chart Executions
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/chart-executions
+- Page updated: `2026-03-01T22:33:58.165Z` → `2026-03-01T22:33:58.165Z`
+
+```diff
+--- before (2026-11-23T15:17:41Z)
++++ after (2026-11-27T02:21:58Z)
+@@ -2,3 +2,3 @@
+ Previous Chart Value Display Type
+ Next Account Settings
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:21:59Z — CHANGED: Chart Plot Alignment
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/chart-plot-alignment
+- Page updated: `2026-03-01T22:33:23.252Z` → `2026-03-01T22:33:23.252Z`
+
+```diff
+--- before (2026-11-23T15:17:43Z)
++++ after (2026-11-27T02:21:59Z)
+@@ -1,3 +1,3 @@
+ Previous Hide Chart Plots
+ Next Order Settings
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:00Z — CHANGED: Chart Value Display Type
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/chart-value-display-type
+- Page updated: `2026-03-01T22:33:41.644Z` → `2026-03-01T22:33:41.644Z`
+
+```diff
+--- before (2026-11-23T15:17:44Z)
++++ after (2026-11-27T02:22:00Z)
+@@ -6,3 +6,3 @@
+ Previous Order Settings
+ Next Chart Executions
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:01Z — CHANGED: Data Update Speed
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/data-update-speed
+- Page updated: `2026-03-01T22:32:52.035Z` → `2026-03-01T22:32:52.035Z`
+
+```diff
+--- before (2026-11-23T15:17:48Z)
++++ after (2026-11-27T02:22:01Z)
+@@ -8,3 +8,3 @@
+ Previous Charts & Data
+ Next Hide Chart Plots
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:04Z — CHANGED: Hide Chart Plots
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/hide-chart-plots
+- Page updated: `2026-03-01T22:33:08.389Z` → `2026-03-01T22:33:08.389Z`
+
+```diff
+--- before (2026-11-23T15:17:51Z)
++++ after (2026-11-27T02:22:04Z)
+@@ -1,3 +1,3 @@
+ Previous Data Update Speed
+ Next Chart Plot Alignment
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:05Z — CHANGED: Hide Economic Events
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/charts-and-data/hide-economic-events
+- Page updated: `2026-03-01T22:35:15.953Z` → `2026-03-01T22:35:15.953Z`
+
+```diff
+--- before (2026-11-23T15:17:53Z)
++++ after (2026-11-27T02:22:05Z)
+@@ -3,3 +3,3 @@
+ Previous Account Settings
+ Next Privacy
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:08Z — CHANGED: Alerts
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/misc/alerts
+- Page updated: `2026-03-01T22:35:53.924Z` → `2026-03-01T22:35:53.924Z`
+
+```diff
+--- before (2026-11-23T15:18:00Z)
++++ after (2026-11-27T02:22:08Z)
+@@ -4,3 +4,3 @@
+ Previous Misc
+ Next Balances Font Size
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:09Z — CHANGED: Balances Font Size
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/settings/misc/balances-font-size
+- Page updated: `2026-03-01T22:36:12.205Z` → `2026-03-01T22:36:12.205Z`
+
+```diff
+--- before (2026-11-23T15:18:02Z)
++++ after (2026-11-27T02:22:09Z)
+@@ -1,3 +1,3 @@
+ Previous Alerts
+ Next Distance To MLL
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-27T02:22:23Z — CHANGED: TopstepX Mobile
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/topstepx-mobile
+- Page updated: `2026-03-01T22:37:45.138Z` → `2026-03-01T22:37:45.138Z`
+
+```diff
+--- before (2026-11-23T15:18:22Z)
++++ after (2026-11-27T02:22:23Z)
+@@ -3,3 +3,3 @@
+ Previous API
+ Next Account Info
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
