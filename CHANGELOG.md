@@ -745,3 +745,21 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
 +Last updated 9 months ago
 ```
 
+## 2026-11-27T18:55:01Z — CHANGED: Topstep Pricing and Payment Questions
+
+- Site: `topstep`
+- URL: https://help.topstep.com/en/articles/14289835-topstep-pricing-and-payment-questions
+- Page updated: `2026-11-25T16:52:59Z` → `2026-11-25T16:52:59Z`
+
+```diff
+--- before (2026-11-25T17:01:47Z)
++++ after (2026-11-27T18:55:01Z)
+@@ -50,5 +50,5 @@
+ | $599
+ Challenges are one-time purchases. There is no subscription, and no Rebills. There is no fee to activate the Payout Round.
+-Challenges don’t offer Resets. The Starter and Launchpad Challenges are the exception, and each includes 2 free Resets.
++Challenges don’t offer Resets. The Starter and Launchpad Challenges are the exception. The Starter Challenge has 2 free Resets in the Challenge Round and the Launchpad Challenge can be Reset once in the Challenge Round for $10.
+ Some Challenges are limited to eligible Traders. Learn more in Topstep Challenges .
+ Express Funded Account Activation & Reactivation
+```
+
