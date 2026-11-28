@@ -763,3 +763,115 @@ Baseline captured 2026-11-23: 145 pages (61 Topstep + 84 TopstepX). No changes d
  Express Funded Account Activation & Reactivation
 ```
 
+## 2026-11-28T01:27:09Z — CHANGED: TopstepX Help Center
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com
+- Page updated: `2026-03-02T14:12:50.085Z` → `2026-03-02T14:12:50.085Z`
+
+```diff
+--- before (2026-11-23T15:16:29Z)
++++ after (2026-11-28T01:27:09Z)
+@@ -2,3 +2,3 @@
+ TopstepX is fully web-based, with no downloads required—making it easy to trade seamlessly on both desktop and mobile.
+ Next Concurrent Sessions Limit
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-28T01:28:01Z — CHANGED: Quotes
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/components/quotes
+- Page updated: `2026-03-02T14:21:41.089Z` → `2026-03-02T14:21:41.089Z`
+
+```diff
+--- before (2026-11-23T15:16:55Z)
++++ after (2026-11-28T01:28:01Z)
+@@ -16,3 +16,3 @@
+ Previous Trades
+ Next Trader Hub
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-28T01:40:50Z — CHANGED: Creating Account Nicknames
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/creating-account-nicknames
+- Page updated: `2026-03-02T16:12:24.196Z` → `2026-03-02T16:12:24.196Z`
+
+```diff
+--- before (2026-11-23T15:17:31Z)
++++ after (2026-11-28T01:40:50Z)
+@@ -4,3 +4,3 @@
+ Previous Trading Lock-Out
+ Next Components
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-28T01:40:51Z — CHANGED: Custom Layouts
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/custom-layouts
+- Page updated: `2026-03-02T15:43:54.289Z` → `2026-03-02T15:43:54.289Z`
+
+```diff
+--- before (2026-11-23T15:17:32Z)
++++ after (2026-11-28T01:40:51Z)
+@@ -13,3 +13,3 @@
+ Previous Concurrent Sessions Limit
+ Next Favoriting Contracts
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-28T01:40:54Z — CHANGED: Favoriting Contracts
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/favoriting-contracts
+- Page updated: `2026-03-02T15:44:12.994Z` → `2026-03-02T15:44:12.994Z`
+
+```diff
+--- before (2026-11-23T15:17:34Z)
++++ after (2026-11-28T01:40:54Z)
+@@ -3,3 +3,3 @@
+ Previous Custom Layouts
+ Next Linking Components
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-28T01:40:56Z — CHANGED: Linking Components
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/linking-components
+- Page updated: `2026-03-02T15:50:24.299Z` → `2026-03-02T15:50:24.299Z`
+
+```diff
+--- before (2026-11-23T15:17:35Z)
++++ after (2026-11-28T01:40:55Z)
+@@ -10,3 +10,3 @@
+ Previous Favoriting Contracts
+ Next Contract Rollover
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
+## 2026-11-28T01:40:57Z — CHANGED: Trading Lock-Out
+
+- Site: `topstepx`
+- URL: https://help.topstepx.com/getting-started/trading-lock-out
+- Page updated: `2026-03-02T15:54:29.460Z` → `2026-03-02T15:54:29.460Z`
+
+```diff
+--- before (2026-11-23T15:17:36Z)
++++ after (2026-11-28T01:40:57Z)
+@@ -15,3 +15,3 @@
+ Previous Data Feed
+ Next Creating Account Nicknames
+-Last updated 8 months ago
++Last updated 9 months ago
+```
+
